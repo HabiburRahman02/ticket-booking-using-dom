@@ -2,7 +2,7 @@
 let selected = [];
 let totalPrice = 0
 function handleSelectedSeat(seat) {
-    
+
     if (selected.includes(seat.innerText)) {
         alert('Seat already added');
         return;
@@ -12,6 +12,11 @@ function handleSelectedSeat(seat) {
     if (selected.length >= 4) {
         alert('One person booked only 4 seat');
         return;
+    }
+
+    if (selected.length >= 3) {
+        const btnCoupon = document.getElementById('btn-coupon');
+        btnCoupon.removeAttribute('disabled')
     }
 
     totalPrice += 550;
@@ -35,3 +40,25 @@ function handleSelectedSeat(seat) {
                         <span>550</span>
                     </li>`
 }
+
+document.getElementById('btn-coupon').addEventListener('click', function () {
+    const couponFieldValue = document.getElementById('field-coupon').value;
+    if (couponFieldValue === 'dis15' || couponFieldValue === 'dis20') {
+        if (couponFieldValue === 'dis15') {
+            const discount = totalPrice * .15
+            const grandPrice = document.getElementById('grand-price');
+            grandPrice.innerText = totalPrice - discount;
+          
+        }
+        else if (couponFieldValue === 'dis20') {
+            const discount = totalPrice * .20
+            const grandPrice = document.getElementById('grand-price');
+            grandPrice.innerText = totalPrice - discount;
+        }
+    }
+    else {
+        return alert('please provide valid coupon')
+    }
+
+
+})

@@ -43,22 +43,55 @@ function handleSelectedSeat(seat) {
 
 document.getElementById('btn-coupon').addEventListener('click', function () {
     const couponFieldValue = document.getElementById('field-coupon').value;
+    const discountElement = document.getElementById('discount')
     if (couponFieldValue === 'dis15' || couponFieldValue === 'dis20') {
         if (couponFieldValue === 'dis15') {
             const discount = totalPrice * .15
             const grandPrice = document.getElementById('grand-price');
             grandPrice.innerText = totalPrice - discount;
-          
+
+            discountElement.innerHTML = `
+            <p>Discount</p>
+                <p>-BDT: <span >${discount}</span></p>
+           `
         }
         else if (couponFieldValue === 'dis20') {
             const discount = totalPrice * .20
             const grandPrice = document.getElementById('grand-price');
             grandPrice.innerText = totalPrice - discount;
+
+            discountElement.innerHTML = `
+            <p>Discount</p>
+                <p>-BDT: <span >${discount}</span></p>
+           `
         }
     }
     else {
         return alert('please provide valid coupon')
     }
+    document.getElementById('coupon-container').classList.add('hidden')
+    document.getElementById('field-phone-number').removeAttribute('disabled')
+    document.getElementById('pass-name').removeAttribute('disabled')
+    document.getElementById('email-id-name').removeAttribute('disabled')
 
 
+})
+
+// phone-number event
+document.getElementById('field-phone-number').addEventListener('keyup', function () {
+    const phoneNumberValue = document.getElementById('field-phone-number').value;
+
+    if (phoneNumberValue.length === 11) {
+        document.getElementById('btn-next').removeAttribute('disabled')
+    }
+    else {
+        document.getElementById('btn-next').setAttribute('disabled')
+    }
+})
+
+
+// btn next
+document.getElementById('btn-next').addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log('oky man')
 })

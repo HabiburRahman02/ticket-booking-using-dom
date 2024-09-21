@@ -92,40 +92,43 @@
             </div>
             <div class="font-bold flex justify-between border-t-2 border-dashed pb-4">
                 <p>Total Price</p>
-                <p>BDT:<span id="total-price">00</span></p>
+                <p>BDT: <span id="total-price">00</span></p>
             </div>
-            <div>
-                <input id="field-coupon" type="text" placeholder="Have any coupon" class="input input-bordered w-full max-w-xs" />
-                <button
-                 id="btn-coupon" class="btn bg-teal-500 text-white" disabled>Apply</button>
+            <div id="coupon-container">
+                <input id="field-coupon" type="text" placeholder="Type dis15 or dis20"
+                    class="input input-bordered w-full max-w-xs" />
+                <button id="btn-coupon" class="btn bg-teal-500 text-white" disabled>Apply</button>
             </div>
-            <div class="font-bold flex justify-between border-t-2 border-dashed pb-4">
+            <div id="discount" class="font-bold flex justify-between pb-4">
+
+            </div>
+            <div class="font-bold flex justify-between pb-4">
                 <p>Grand Price</p>
-                <p>BDT:<span id="grand-price">1100</span></p>
+                <p>BDT: <span id="grand-price">****</span></p>
             </div>
             <div class="">
-                <form class="card-body px-0">
+                <form id="calculate-form" class="card-body px-0">
                     <div class="form-control ">
                         <label class="label">
                             <span class="label-text">Passenger Name*</span>
                         </label>
-                        <input type="text" placeholder="Enter name" class="input input-bordered" required />
+                        <input disabled id="pass-name" type="text" placeholder="Enter name" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Phone Number*</span>
                         </label>
-                        <input type="number" placeholder="Enter number" class="input input-bordered" required />
+                        <input disabled id="field-phone-number" type="number" placeholder="Enter number" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Email Id</span>
                         </label>
-                        <input type="text" placeholder="Enter email id" class="input input-bordered" required />
+                        <input disabled id="email-id-name" type="text" placeholder="Enter email id" class="input input-bordered" required />
                     </div>
                     <div class="form-control mt-6">
                         <!-- Open the modal using ID.showModal() method -->
-                        <button class="btn bg-teal-500 text-white" onclick="my_modal_5.showModal()">Next</button>
+                        <button id="btn-next" disabled class="btn bg-teal-500 text-white" onclick="my_modal_5.showModal()">Next</button>
                         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                             <div class="modal-box">
                                 <h3 class="text-lg font-bold">Hello!</h3>
@@ -133,7 +136,7 @@
                                 <div class="modal-action">
                                     <form method="dialog">
                                         <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn">Close</button>
+                                        <button class="btn">Continue</button>
                                     </form>
                                 </div>
                             </div>

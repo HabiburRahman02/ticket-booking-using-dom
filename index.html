@@ -20,7 +20,7 @@
             </div>
 
             <!-- ticket start -->
-            <div class="grid grid-cols-5 gap-12">
+            <div class="grid grid-cols-5 gap-4">
                 <button>A</button>
                 <button class="btn hover:bg-green-500">A1</button>
                 <button class="btn hover:bg-green-500">A2</button>
@@ -31,11 +31,106 @@
                 <button class="btn hover:bg-green-500">B2</button>
                 <button class="btn hover:bg-green-500">B3</button>
                 <button class="btn hover:bg-green-500">B4</button>
+                <button>C</button>
+                <button class="btn hover:bg-green-500">C1</button>
+                <button class="btn hover:bg-green-500">C2</button>
+                <button class="btn hover:bg-green-500">C3</button>
+                <button class="btn hover:bg-green-500">C4</button>
+                <button>D</button>
+                <button class="btn hover:bg-green-500">D1</button>
+                <button class="btn hover:bg-green-500">D2</button>
+                <button class="btn hover:bg-green-500">D3</button>
+                <button class="btn hover:bg-green-500">D4</button>
+                <button>E</button>
+                <button class="btn hover:bg-green-500">E1</button>
+                <button class="btn hover:bg-green-500">E2</button>
+                <button class="btn hover:bg-green-500">E3</button>
+                <button class="btn hover:bg-green-500">E4</button>
+                <button>F</button>
+                <button class="btn hover:bg-green-500">F1</button>
+                <button class="btn hover:bg-green-500">F2</button>
+                <button class="btn hover:bg-green-500">F3</button>
+                <button class="btn hover:bg-green-500">F4</button>
+                <button>G</button>
+                <button class="btn hover:bg-green-500">G1</button>
+                <button class="btn hover:bg-green-500">G2</button>
+                <button class="btn hover:bg-green-500">G3</button>
+                <button class="btn hover:bg-green-500">G4</button>
+                <button>H</button>
+                <button class="btn hover:bg-green-500">H1</button>
+                <button class="btn hover:bg-green-500">H2</button>
+                <button class="btn hover:bg-green-500">H3</button>
+                <button class="btn hover:bg-green-500">H4</button>
+                <button>I</button>
+                <button class="btn hover:bg-green-500">I1</button>
+                <button class="btn hover:bg-green-500">I2</button>
+                <button class="btn hover:bg-green-500">I3</button>
+                <button class="btn hover:bg-green-500">I4</button>
+                <button>J</button>
+                <button class="btn hover:bg-green-500">J1</button>
+                <button class="btn hover:bg-green-500">J2</button>
+                <button class="btn hover:bg-green-500">J3</button>
+                <button class="btn hover:bg-green-500">J4</button>
             </div>
             <!-- ticket end -->
         </div>
-        <div class="bg-green-400">
-            df
+        <div class="space-y-4">
+            <h3 class="text-2xl border-b-2 border-dashed pb-4">Select your seat</h3>
+            <div class="font-bold flex justify-between border-b-2 border-dashed pb-4">
+                <p>Seat</p>
+                <p>Class</p>
+                <p>Price</p>
+            </div>
+            <div class="font-bold flex justify-between border-t-2 border-dashed pb-4">
+                <p>Total Price</p>
+                <p>BDT:<span>1100</span></p>
+            </div>
+            <div>
+                <input type="text" placeholder="Have any coupon" class="input input-bordered w-full max-w-xs" />
+                <button class="btn bg-teal-500 text-white" disabled>Apply</button>
+            </div>
+            <div class="font-bold flex justify-between border-t-2 border-dashed pb-4">
+                <p>Grand Price</p>
+                <p>BDT:<span>1100</span></p>
+            </div>
+            <div class="w-full">
+                <form class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Passenger Name*</span>
+                        </label>
+                        <input type="text" placeholder="Enter name" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Phone Number*</span>
+                        </label>
+                        <input type="number" placeholder="Enter number" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email Id</span>
+                        </label>
+                        <input type="text" placeholder="Enter email id" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control mt-6">
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn bg-teal-500 text-white" onclick="my_modal_5.showModal()">Next</button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box">
+                                <h3 class="text-lg font-bold">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- seat section end -->

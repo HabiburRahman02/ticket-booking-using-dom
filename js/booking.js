@@ -85,7 +85,7 @@ document.getElementById('field-phone-number').addEventListener('keyup', function
         document.getElementById('btn-next').removeAttribute('disabled')
     }
     else {
-        document.getElementById('btn-next').setAttribute('disabled')
+        document.getElementById('btn-next').setAttribute('disabled', true)
     }
 })
 
@@ -94,4 +94,10 @@ document.getElementById('field-phone-number').addEventListener('keyup', function
 document.getElementById('btn-next').addEventListener('click', function (e) {
     e.preventDefault();
     console.log('oky man')
+})
+
+// btn continue
+document.getElementById('form-continue').addEventListener('click', function(e){
+    e.preventDefault();
+    console.log('continue', e)
 })
